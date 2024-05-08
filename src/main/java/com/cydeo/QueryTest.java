@@ -72,5 +72,9 @@ public class QueryTest implements CommandLineRunner {
         System.out.println("findTop3ByOOrderByNameDesc: "+categoryRepository.findTop3ByOrderByNameDesc());
 
 
+        System.out.println("=====================Customer========================");
+        System.out.println("findByUserName: "+customerRepository.findByUserName("asturton0"));
+        System.out.println("retrieveCustomerByEmail: "+customerRepository.retrieveCustomerByEmail("mokinneally6@zimbio.com"));
+
     }
 }
