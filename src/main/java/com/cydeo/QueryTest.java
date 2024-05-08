@@ -42,8 +42,8 @@ public class QueryTest implements CommandLineRunner {
 
         System.out.println("=====================Address========================");
         System.out.println("findByNameStartingWith: " +addressRepository.findAllByStreetStartingWith("Utah"));
-
-
+        System.out.println("findDistinct3TopByCustomer_Email: "+addressRepository.findDistinctTop3ByCustomer_Email("rmcroberts1o@theglobeandmail.com"));
+        System.out.println("retrieveAddressWithCustomerId: "+addressRepository.retrieveAddressWithCustomerId(2L));
 
     }
 }
