@@ -44,28 +44,28 @@ public class QueryTest implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
-//        System.out.println("=====================Address========================");
-//        System.out.println("findByNameStartingWith: " +addressRepository.findAllByStreetStartingWith("Utah"));
-////        System.out.println("findDistinct3TopByCustomer_Email: "+addressRepository.findDistinctTop3ByCustomer_Email());
-//        System.out.println("retrieveAddressWithCustomerId: "+addressRepository.retrieveAddressWithCustomerId(2L));
-//
-//
-//        System.out.println("=====================Balance========================");
-//        System.out.println("retrieveMaxTop5Balance: "+balanceRepository.retrieveMaxTop5Balance());
-//        System.out.println("findByAmountGreaterThanEqual: "+balanceRepository.findByAmountGreaterThanEqual(BigDecimal.valueOf(319.22)));
-//        System.out.println("retrieveBalanceLessThan: "+balanceRepository.retrieveBalanceLessThan(BigDecimal.valueOf(320)));
-//
-//
-//
-//        System.out.println("=====================CartItem========================");
+        System.out.println("=====================Address========================");
+        System.out.println("findByNameStartingWith: " +addressRepository.findAllByStreetStartingWith("Utah"));
+        System.out.println("findDistinct3TopByCustomer_Email: "+addressRepository.findDistinctTop3ByCustomer_Email("asturton0@list-manage.com"));
+        System.out.println("retrieveAddressWithCustomerId: "+addressRepository.retrieveAddressWithCustomerId(2L));
+
+
+        System.out.println("=====================Balance========================");
+        System.out.println("retrieveMaxTop5Balance: "+balanceRepository.retrieveMaxTop5Balance());
+        System.out.println("findByAmountGreaterThanEqual: "+balanceRepository.findByAmountGreaterThanEqual(BigDecimal.valueOf(319.22)));
+        System.out.println("retrieveBalanceLessThan: "+balanceRepository.retrieveBalanceLessThan(BigDecimal.valueOf(320)));
+
+
+
+        System.out.println("=====================CartItem========================");
         System.out.println("countBy: "+cartItemRepository.countCartItemBy());
-        System.out.println("findByCart_CartState: "+cartItemRepository.findByCartCartState(CartState.CREATED));
+//        System.out.println("findByCart_CartState: "+cartItemRepository.findByCartCartState(CartState.CREATED));
 //        System.out.println("retrieveCartItemByCartStateAndProductName: "+cartItemRepository.retrieveCartItemByCartStateAndProductName(CartState.CREATED,"Tomatoes"));
-        System.out.println("retrieveCartItemsWithCartStateAndWithoutDiscount: "+cartItemRepository.retrieveCartItemsWithCartStateAndWithoutDiscount("CREATED"));
+//        System.out.println("retrieveCartItemsWithCartStateAndWithoutDiscount: "+cartItemRepository.retrieveCartItemsWithCartStateAndWithoutDiscount("CREATED"));
 
 //
 //        System.out.println("=====================Cart========================");
-        System.out.println("findByDiscountType: "+cartRepository.findByDiscount_Id(2L));
+//        System.out.println("findByDiscountType: "+cartRepository.findByDiscount_Id(2L));
 //        System.out.println("retrieveByCustomer: "+cartRepository.retrieveByCustomer(1L));
 //
 //        System.out.println("=====================Category========================");
