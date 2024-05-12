@@ -16,11 +16,19 @@ import java.math.BigDecimal;
 @Getter
 @Setter
 @NoArgsConstructor
-@Data
 public class Discount extends BaseEntity{
 
     private String name;
     private BigDecimal discount;
     @Enumerated(EnumType.STRING)
     private DiscountType discountType;
+
+    @Override
+    public String toString() {
+        return "Discount{" +
+                "name='" + name + '\'' +
+                ", discount=" + discount +
+                ", discountType=" + discountType +
+                '}';
+    }
 }

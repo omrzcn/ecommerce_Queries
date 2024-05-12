@@ -14,7 +14,6 @@ import org.hibernate.annotations.Fetch;
 @Getter
 @Setter
 @NoArgsConstructor
-@Data
 public class CartItem extends BaseEntity{
 
     private Integer quantity;
@@ -24,4 +23,11 @@ public class CartItem extends BaseEntity{
 
     @ManyToOne
     private Product product;
+
+    @Override
+    public String toString() {
+        return "CartItem{" +
+                "quantity=" + quantity +
+                '}';
+    }
 }

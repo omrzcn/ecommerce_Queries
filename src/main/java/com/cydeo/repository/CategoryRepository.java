@@ -2,6 +2,7 @@
 package com.cydeo.repository;
 
 import com.cydeo.entity.Category;
+import com.cydeo.entity.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -14,6 +15,6 @@ public interface CategoryRepository extends JpaRepository<Category,Long> {
     List<Category> findByName(String name);
 
     //Write a derived query to get top 3 categories order by name desc
-
     List<Category> findTop3ByOrderByNameDesc();
+
 }

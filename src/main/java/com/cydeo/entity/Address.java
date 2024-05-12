@@ -12,7 +12,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-@Data
+
 @NoArgsConstructor
 public class Address extends BaseEntity{
 
@@ -23,5 +23,12 @@ public class Address extends BaseEntity{
     @ManyToOne
     private Customer customer;
 
-
+    @Override
+    public String toString() {
+        return "Address{" +
+                "name='" + name + '\'' +
+                ", street='" + street + '\'' +
+                ", zipCode='" + zipCode + '\'' +
+                '}';
+    }
 }

@@ -17,7 +17,6 @@ import java.math.BigDecimal;
 @Setter
 @NoArgsConstructor
 @Table(name = "orders")
-@Data
 public class Order extends BaseEntity{
 
     private BigDecimal paidPrice;
@@ -31,4 +30,13 @@ public class Order extends BaseEntity{
 
     @OneToOne
     private Payment payment;
+
+
+    @Override
+    public String toString() {
+        return "Order{" +
+                "paidPrice=" + paidPrice +
+                ", totalPrice=" + totalPrice +
+                '}';
+    }
 }

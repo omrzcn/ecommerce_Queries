@@ -14,11 +14,17 @@ import java.math.BigDecimal;
 @Getter
 @Setter
 @NoArgsConstructor
-@Data
 public class Balance extends BaseEntity{
 
     private BigDecimal amount;
 
     @OneToOne
     private Customer customer;
+
+    @Override
+    public String toString() {
+        return "Balance{" +
+                "amount=" + amount +
+                '}';
+    }
 }

@@ -11,7 +11,6 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-@Data
 public class Customer extends BaseEntity{
 
     private String firstName;
@@ -19,4 +18,13 @@ public class Customer extends BaseEntity{
     private String userName;
     private String email;
 
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", userName='" + userName + '\'' +
+                ", email='" + email + '\'' +
+                '}';
+    }
 }
